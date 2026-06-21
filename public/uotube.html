@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>うおtube by sennin</title>
+
+    <meta name="description" content="">
+
+    <meta name="keywords" content="うおtube,仙人tube,学校,公民,youtube,規制突破">
+
+    <meta property="og:title" content="うおtube">
+    <meta property="og:description" content="公民学習サイトです。さまざまな学年やテスとに対応しています。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:image" content="https://pixta.jp/tags/%E5%85%AC%E6%B0%91?search_type=2">
+    <meta property="og:site_name" content="UOWTube">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="学習しよう">
+    <meta name="twitter:description" content="公民ができるように!?">
+    <meta name="twitter:image" content="https://example.com/og-image.jpg">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        /* 右上に固定する戻るボタンのスタイル */
+        .top-right-back-btn {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 99999; /* 他の要素より最前面に表示 */
+            background-color: #333333;
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: background-color 0.2s;
+        }
+        .top-right-back-btn:hover {
+            background-color: #555555;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="/home.html" class="top-right-back-btn">戻る</a>
+
+    <div id="app">URLの内容を読み込んでいます...</div>
+
+    <script>
+        const url = 'https://raw.githubusercontent.com/xianrentesuchi-bit/Uow/refs/heads/main/index.html.txt ';
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('ネットワークエラーまたはファイルが見つかりません');
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.open();
+                document.write(html);
+                document.close();
+            })
+            .catch(error => {
+                document.getElementById('app').innerText = 'エラーが発生しました: ' + error.message;
+                console.error(error);
+            });
+    </script>
+</body>
+</html>
