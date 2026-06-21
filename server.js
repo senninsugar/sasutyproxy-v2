@@ -26,8 +26,8 @@ app.get('/proxy', (req, res) => {
     res.sendFile(path.join(process.cwd(), '/public/proxy.html'));
 });
 
-app.get('/video-url-1', (req, res) => {
-    res.sendFile(path.join(process.cwd(), '/public/video-url-1.html'));
+app.get('/uotube', (req, res) => {
+    res.sendFile(path.join(process.cwd(), '/public/uotube.html'));
 });
 
 server.on('request', (req, res) => {
